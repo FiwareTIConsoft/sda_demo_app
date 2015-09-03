@@ -1,6 +1,6 @@
 demoapp:
         monitoringNode: local
-        sdaHandlerBaseUri: http://localhost:8080
+        sdaHandlerBaseUri: http://localhost:8089
         sdaHandlerRestartUri: /restartCollector
 spring:
     application:
@@ -20,4 +20,4 @@ spring:
                     hibernate:
                               dialect: org.hibernate.dialect.MySQL5Dialect
 server:
-    port: 8088
+    port: 9000

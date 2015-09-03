@@ -42,7 +42,7 @@ public class MonitoringController {
     private String sdaHandlerRestartUri;
     
     @RequestMapping(value="/ht/{ht}",method=POST)
-    public OnMonitoringKeys lastTweetsHt(@PathVariable String ht,@RequestParam(value="monNode",required = false) String monNode) {
+    public OnMonitoringKeys addHtOnMon(@PathVariable String ht,@RequestParam(value="monNode",required = false) String monNode) {
         log.info(String.format("Adding ht %s on monitoring",ht));
         
         if(ht==null || ht.isEmpty())
