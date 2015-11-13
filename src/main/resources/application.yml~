@@ -7,8 +7,13 @@ spring:
         name: sdaDemoApp
     datasource:
         url: jdbc:mysql://localhost:3306/twstats
+<<<<<<< HEAD
+        username: root
+        password: adm1nca
+=======
         username: 
         password: 
+>>>>>>> 0ffc5867b839296f50e66b6e8a03a189c5a9df7d
     jpa: 
         show-sql: true
         format-sql: true
