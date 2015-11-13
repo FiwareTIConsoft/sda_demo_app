@@ -1,0 +1,1383 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sda</title>
+    <link href="css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/idea.css">
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/toc-resize.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/api-specification.css"> 
+    
+
+
+    
+</head>
+<body id="respecDocument" class="h-entry">
+<div class="container">
+
+
+  <div id="TOC-container">
+    
+<div id="fiware-logo-container">
+    <div id="fiware-logo"></div>
+</div>
+<nav id="toc">
+
+        
+    <ul class="toc">
+
+        
+	        
+        
+	        
+        
+
+
+<li><a href="#api-summary">API Summary</a></li>
+
+
+    
+    
+
+
+
+
+
+
+
+<li><a href="#API_specification">API Specification</a>
+    <ul class="toc">
+    
+
+                        <li>
+                            
+                                <a href="#resource_group_add-keys-on-monitoring" title = "Group Add keys on monitoring">Group Add keys on monitoring</a>
+                            
+                            <ul class="toc">
+                              
+                                
+                                    <li>
+                                        <a href="#resource_add-new-hashtag-on-monitoring" title = "Resource Add new hashtag on monitoring">Resource Add new hashtag on monitoring</a>
+                                        <ul class="toc  ">
+                                        
+                                            
+                                                <li><a href="#action_add-new-ht-on-monitoring" title ="POST - Add new ht on monitoring">POST - Add new ht on monitoring</a></li>
+                                            
+
+                                        
+                                        </ul>
+                                    </li>
+                                
+                              
+                            </ul>
+                        </li>
+                      
+
+                        <li>
+                            
+                                <a href="#resource_group_gender-recognition-algorithm-analytics" title = "Group Gender Recognition Algorithm analytics">Group Gender Recognition Algorithm analytics</a>
+                            
+                            <ul class="toc">
+                              
+                                
+                                    <li>
+                                        <a href="#resource_last-data-by-hashtag" title = "Resource Last data by hashtag">Resource Last data by hashtag</a>
+                                        <ul class="toc  ">
+                                        
+                                            
+                                                <li><a href="#action_get-last-data-by-hashtag" title ="GET - Get last data by hashtag">GET - Get last data by hashtag</a></li>
+                                            
+
+                                        
+                                        </ul>
+                                    </li>
+                                
+                              
+                                
+                                    <li>
+                                        <a href="#resource_history-data-by-hashtag" title = "Resource History data by hashtag">Resource History data by hashtag</a>
+                                        <ul class="toc  ">
+                                        
+                                            
+                                                <li><a href="#action_get-history-data-by-hashtag" title ="GET - Get history data by hashtag">GET - Get history data by hashtag</a></li>
+                                            
+
+                                        
+                                        </ul>
+                                    </li>
+                                
+                              
+                            </ul>
+                        </li>
+                      
+
+                        <li>
+                            
+                                <a href="#resource_group_last-tweets" title = "Group last tweets">Group last tweets</a>
+                            
+                            <ul class="toc">
+                              
+                                
+                                    <li>
+                                        <a href="#resource_get-last-tweets" title = "Resource Get last tweets">Resource Get last tweets</a>
+                                        <ul class="toc  ">
+                                        
+                                            
+                                                <li><a href="#action_get-last-tweets-by-hashtag" title ="GET - Get last tweets by hashtag">GET - Get last tweets by hashtag</a></li>
+                                            
+
+                                        
+                                        </ul>
+                                    </li>
+                                
+                              
+                            </ul>
+                        </li>
+                      
+    <li><a href="#examples">Examples</a></li>
+    </ul>
+</li>
+    
+    
+    
+   </ul>
+</nav>
+
+  </div>
+  
+
+
+  <div id="API-content">
+  
+    
+	
+
+	
+
+
+
+	
+
+	
+
+
+
+
+
+	
+	
+	
+
+	
+	
+	
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+
+
+<hr>
+
+
+	<h2 id="abstract">Abstract</h2>
+	<p>Sda is a simple set of api allowing adding hashtags on monitoring on Social
+Data Aggregator and retrieve information on generated analytics.</p>
+
+
+
+
+<hr>
+  
+
+
+    
+    
+<nav class="api-summary">
+<h1 id="api-summary"> API Summary </h1>
+    <ul>
+
+
+    
+
+        <li>
+            
+                <a href="#resource_group_add-keys-on-monitoring" title = "Add keys on monitoring">Add keys on monitoring</a>
+            
+            <ul>
+              
+                
+                    <li>
+                        <a href="#resource_add-new-hashtag-on-monitoring" title = "Resource Add new hashtag on monitoring">
+                        
+                            Add new hashtag on monitoring
+                        
+                        </a>
+                        <ul class="toc  ">
+                        
+                            
+                                <li>
+                                    <a href="#action_add-new-ht-on-monitoring" title ="POST - Add new ht on monitoring"><span class="actionMethod">POST</span> - Add new ht on monitoring
+                                    
+                                        
+                                            [/monitor/ht/{ht}]
+                                        
+                                    
+                                    </a>
+                                </li>
+                            
+
+                        
+                        </ul>
+                    </li>
+                
+              
+            </ul>
+        </li>
+      
+
+        <li>
+            
+                <a href="#resource_group_gender-recognition-algorithm-analytics" title = "Gender Recognition Algorithm analytics">Gender Recognition Algorithm analytics</a>
+            
+            <ul>
+              
+                
+                    <li>
+                        <a href="#resource_last-data-by-hashtag" title = "Resource Last data by hashtag">
+                        
+                            Last data by hashtag
+                        
+                        </a>
+                        <ul class="toc  ">
+                        
+                            
+                                <li>
+                                    <a href="#action_get-last-data-by-hashtag" title ="GET - Get last data by hashtag"><span class="actionMethod">GET</span> - Get last data by hashtag
+                                    
+                                        
+                                            [/gender/hts/{ht}/last]
+                                        
+                                    
+                                    </a>
+                                </li>
+                            
+
+                        
+                        </ul>
+                    </li>
+                
+              
+                
+                    <li>
+                        <a href="#resource_history-data-by-hashtag" title = "Resource History data by hashtag">
+                        
+                            History data by hashtag
+                        
+                        </a>
+                        <ul class="toc  ">
+                        
+                            
+                                <li>
+                                    <a href="#action_get-history-data-by-hashtag" title ="GET - Get history data by hashtag"><span class="actionMethod">GET</span> - Get history data by hashtag
+                                    
+                                        
+                                            [/gender/hts/{ht}/history]
+                                        
+                                    
+                                    </a>
+                                </li>
+                            
+
+                        
+                        </ul>
+                    </li>
+                
+              
+            </ul>
+        </li>
+      
+
+        <li>
+            
+                <a href="#resource_group_last-tweets" title = "last tweets">last tweets</a>
+            
+            <ul>
+              
+                
+                    <li>
+                        <a href="#resource_get-last-tweets" title = "Resource Get last tweets">
+                        
+                            Get last tweets
+                        
+                        </a>
+                        <ul class="toc  ">
+                        
+                            
+                                <li>
+                                    <a href="#action_get-last-tweets-by-hashtag" title ="GET - Get last tweets by hashtag"><span class="actionMethod">GET</span> - Get last tweets by hashtag
+                                    
+                                        
+                                            [/tweets/{ht}{?numResults}]
+                                        
+                                    
+                                    </a>
+                                </li>
+                            
+
+                        
+                        </ul>
+                    </li>
+                
+              
+            </ul>
+        </li>
+      
+
+    </ul>
+</nav>
+
+    
+    
+
+
+
+
+		
+	
+	
+
+
+
+
+
+	
+
+
+
+    
+
+  
+  <section id="API_specification">
+      <h1>API Specification</h1>
+      
+
+
+
+
+        
+            <section id="resource_group_add-keys-on-monitoring" class="resourceGroup">
+            <h2 id="h-resource_group_add-keys-on-monitoring">Add keys on monitoring</h2>
+        
+	<p>Resources related to how add keys on monitoring on Social Data Aggregator</p>
+        
+            <section id="resource_add-new-hashtag-on-monitoring" class="resource">
+                 <div class= "header" >
+                 
+                    <h3 id="h-resource_add-new-hashtag-on-monitoring">Add new hashtag on monitoring</h3>
+                    <span class="extra-header">[/monitor/ht/{ht}]</span>
+                 
+                 </div>
+                
+                
+                
+
+		        
+                
+                
+
+
+
+
+
+
+    
+
+
+                
+
+
+                    
+                        <div id="action_add-new-ht-on-monitoring" class="action POST">
+
+                        
+    <div class="header">
+        
+            <h4 id="h-action_add-new-ht-on-monitoring">Add new ht on monitoring </h4>
+            <span class="extra-header">
+		POST 
+                
+                    /monitor/ht/{ht}
+                
+            </span>
+        
+
+    </div>
+
+        
+                            <div id="add-new-ht-on-monitoring_body" class="">
+                                
+                                
+                                
+                                
+
+	<span class="parameters-title">Parameters</span>
+	<dl>
+		
+			<dt>
+				<span class="parameter-name">ht</span> <span class="parameter-attributes">(Required, String)</span>
+			</dt>
+			<dd>
+				the hashtag to monitor from twitter
+				
+			</dd>
+		
+	</dl>
+			
+                                
+                                
+      
+                                    
+        	                            
+    
+        	                            
+        		                            
+                                        
+                                        
+                                        
+
+<div class="rest-packet-div">
+
+            <span class="packetType">Response 200</span> 
+        
+            (application/json)
+        
+    
+            
+            
+     
+</div>
+        	                            
+                                    
+                                    <div>
+                                    <div class="goExample">
+                                        <a href="#action_add-new-ht-on-monitoring_examples">Go to example</a>
+                                    </div>
+                                    
+                                        
+    <div class="goApiary">
+    
+        
+    
+        
+    
+    </div>
+
+                                    
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+            </section>
+        
+    </section>
+
+        
+            <section id="resource_group_gender-recognition-algorithm-analytics" class="resourceGroup">
+            <h2 id="h-resource_group_gender-recognition-algorithm-analytics">Gender Recognition Algorithm analytics</h2>
+        
+	<p>Resources related on analytics result regarding Gender Recognition Algorithm</p>
+        
+            <section id="resource_last-data-by-hashtag" class="resource">
+                 <div class= "header" >
+                 
+                    <h3 id="h-resource_last-data-by-hashtag">Last data by hashtag</h3>
+                    <span class="extra-header">[/gender/hts/{ht}/last]</span>
+                 
+                 </div>
+                
+                
+                
+
+		        
+                
+                
+
+
+
+
+
+
+    
+
+
+                
+
+
+                    
+                        <div id="action_get-last-data-by-hashtag" class="action GET">
+
+                        
+    <div class="header">
+        
+            <h4 id="h-action_get-last-data-by-hashtag">Get last data by hashtag </h4>
+            <span class="extra-header">
+		GET 
+                
+                    /gender/hts/{ht}/last
+                
+            </span>
+        
+
+    </div>
+
+        
+                            <div id="get-last-data-by-hashtag_body" class="">
+                                
+                                
+                                
+                                
+
+	<span class="parameters-title">Parameters</span>
+	<dl>
+		
+			<dt>
+				<span class="parameter-name">ht</span> <span class="parameter-attributes">(Required, String)</span>
+			</dt>
+			<dd>
+				The hashtag on which retrieve the analytics
+				
+			</dd>
+		
+	</dl>
+			
+                                
+                                
+      
+                                    
+        	                            
+    
+        	                            
+        		                            
+                                        
+                                        
+                                        
+
+<div class="rest-packet-div">
+
+            <span class="packetType">Response 200</span> 
+        
+            (application/json)
+        
+    
+            
+            
+     
+</div>
+        	                            
+                                    
+                                    <div>
+                                    <div class="goExample">
+                                        <a href="#action_get-last-data-by-hashtag_examples">Go to example</a>
+                                    </div>
+                                    
+                                        
+    <div class="goApiary">
+    
+        
+    
+        
+    
+    </div>
+
+                                    
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+            </section>
+        
+            <section id="resource_history-data-by-hashtag" class="resource">
+                 <div class= "header" >
+                 
+                    <h3 id="h-resource_history-data-by-hashtag">History data by hashtag</h3>
+                    <span class="extra-header">[/gender/hts/{ht}/history]</span>
+                 
+                 </div>
+                
+                
+                
+
+		        
+                
+                
+
+
+
+
+
+
+    
+
+
+                
+
+
+                    
+                        <div id="action_get-history-data-by-hashtag" class="action GET">
+
+                        
+    <div class="header">
+        
+            <h4 id="h-action_get-history-data-by-hashtag">Get history data by hashtag </h4>
+            <span class="extra-header">
+		GET 
+                
+                    /gender/hts/{ht}/history
+                
+            </span>
+        
+
+    </div>
+
+        
+                            <div id="get-history-data-by-hashtag_body" class="">
+                                
+                                
+                                
+                                
+
+	<span class="parameters-title">Parameters</span>
+	<dl>
+		
+			<dt>
+				<span class="parameter-name">ht</span> <span class="parameter-attributes">(Required, String)</span>
+			</dt>
+			<dd>
+				The hashtag on which retrieve the analytics
+				
+			</dd>
+		
+	</dl>
+			
+                                
+                                
+      
+                                    
+        	                            
+    
+        	                            
+        		                            
+                                        
+                                        
+                                        
+
+<div class="rest-packet-div">
+
+            <span class="packetType">Response 200</span> 
+        
+            (application/json)
+        
+    
+            
+            
+     
+</div>
+        	                            
+                                    
+                                    <div>
+                                    <div class="goExample">
+                                        <a href="#action_get-history-data-by-hashtag_examples">Go to example</a>
+                                    </div>
+                                    
+                                        
+    <div class="goApiary">
+    
+        
+    
+        
+    
+    </div>
+
+                                    
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+            </section>
+        
+    </section>
+
+        
+            <section id="resource_group_last-tweets" class="resourceGroup">
+            <h2 id="h-resource_group_last-tweets">last tweets</h2>
+        
+	
+        
+            <section id="resource_get-last-tweets" class="resource">
+                 <div class= "header" >
+                 
+                    <h3 id="h-resource_get-last-tweets">Get last tweets</h3>
+                    <span class="extra-header">[/tweets/{ht}{?numResults}]</span>
+                 
+                 </div>
+                
+                
+                
+
+		        
+                
+                
+
+
+
+
+
+
+    
+
+
+                
+
+
+                    
+                        <div id="action_get-last-tweets-by-hashtag" class="action GET">
+
+                        
+    <div class="header">
+        
+            <h4 id="h-action_get-last-tweets-by-hashtag">Get last tweets by hashtag </h4>
+            <span class="extra-header">
+		GET 
+                
+                    /tweets/{ht}{?numResults}
+                
+            </span>
+        
+
+    </div>
+
+        
+                            <div id="get-last-tweets-by-hashtag_body" class="">
+                                
+                                
+                                
+                                
+
+	<span class="parameters-title">Parameters</span>
+	<dl>
+		
+			<dt>
+				<span class="parameter-name">ht</span> <span class="parameter-attributes">(Required, String)</span>
+			</dt>
+			<dd>
+				The hashtag on which retrieve the analytics
+				
+			</dd>
+		
+			<dt>
+				<span class="parameter-name">numResults</span> <span class="parameter-attributes">(Required, int)</span>
+			</dt>
+			<dd>
+				Number of expected results &#40;5 -&gt; last five results&#41;
+				
+			</dd>
+		
+	</dl>
+			
+                                
+                                
+      
+                                    
+        	                            
+    
+        	                            
+        		                            
+                                        
+                                        
+                                        
+
+<div class="rest-packet-div">
+
+            <span class="packetType">Response 200</span> 
+        
+            (application/json)
+        
+    
+            
+            
+     
+</div>
+        	                            
+                                    
+                                    <div>
+                                    <div class="goExample">
+                                        <a href="#action_get-last-tweets-by-hashtag_examples">Go to example</a>
+                                    </div>
+                                    
+                                        
+    <div class="goApiary">
+    
+        
+    
+        
+    
+    </div>
+
+                                    
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    
+            </section>
+        
+    </section>
+
+<section id="examples">
+    <div class= "header" ><h2>Examples</h2> </div>
+    
+        
+            <section id="resource_group_add-keys-on-monitoring_example" class="resourceGroupExample">
+                <div class= "header" ><h3 id="h-resource_group_add-keys-on-monitoring_example">Add keys on monitoring</h3> </div>
+        
+
+                
+                    <section id="resource_add-new-hashtag-on-monitoring_example" class="resourceExample">
+                         <div class= "header" >
+                         
+                            <h4 id="h-resource_add-new-hashtag-on-monitoring_example">Add new hashtag on monitoring</h4>
+                            <span class="extra-header">[/monitor/ht/{ht}]</span>
+                         
+                         </div>
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+
+                           
+
+                            
+                                <div id="action_add-new-ht-on-monitoring_examples" class="actionExample POST">
+
+                                    
+    <div class="header">
+        
+            <h5 id="h-action_add-new-ht-on-monitoring_examples">Add new ht on monitoring </h5>
+            <span class="extra-header">
+		POST 
+                
+                    /monitor/ht/{ht}
+                
+            </span>
+        
+
+    </div>
+
+                
+                                    <div id="action_add-new-ht-on-monitoring_body" class=""> 
+                                        
+                                        
+                                        
+                                                 
+                                        
+                                            
+                                            
+                                                
+            
+                                                
+                                                    
+                                                
+                                                
+                                                
+
+<div class="rest-packet-div">
+
+            <span class="packetType">Response 200</span> 
+        
+            (application/json)
+        
+    
+            
+            
+            
+            
+
+
+
+ 
+            <div id="action_add-new-ht-on-monitoring_Response_1_body" class=" action-div-body">
+                <p></p>
+
+                
+        	         <div class= "header"><p>Headers</p></div>
+                    
+                    
+                        
+                    
+
+        	        <pre><code>Content-Type: application/json</code></pre>
+                
+
+                
+                    <div class= "header"><p>Body</p></div>
+                    <pre><code>{
+    "key": "#twitter",
+    "onMonitoringFrom":"2015-09-01T22:13:13+02"
+ }
+</code></pre>
+                
+
+                
+            </div>
+            
+            
+     
+</div>
+                                                
+                                            
+                                            <div class="goActions">
+                                                <a href="#action_add-new-ht-on-monitoring">Go to specification</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            
+                    </section>
+            
+        </section>
+    
+        
+            <section id="resource_group_gender-recognition-algorithm-analytics_example" class="resourceGroupExample">
+                <div class= "header" ><h3 id="h-resource_group_gender-recognition-algorithm-analytics_example">Gender Recognition Algorithm analytics</h3> </div>
+        
+
+                
+                    <section id="resource_last-data-by-hashtag_example" class="resourceExample">
+                         <div class= "header" >
+                         
+                            <h4 id="h-resource_last-data-by-hashtag_example">Last data by hashtag</h4>
+                            <span class="extra-header">[/gender/hts/{ht}/last]</span>
+                         
+                         </div>
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+
+                           
+
+                            
+                                <div id="action_get-last-data-by-hashtag_examples" class="actionExample GET">
+
+                                    
+    <div class="header">
+        
+            <h5 id="h-action_get-last-data-by-hashtag_examples">Get last data by hashtag </h5>
+            <span class="extra-header">
+		GET 
+                
+                    /gender/hts/{ht}/last
+                
+            </span>
+        
+
+    </div>
+
+                
+                                    <div id="action_get-last-data-by-hashtag_body" class=""> 
+                                        
+                                        
+                                        
+                                                 
+                                        
+                                            
+                                            
+                                                
+            
+                                                
+                                                    
+                                                
+                                                
+                                                
+
+<div class="rest-packet-div">
+
+            <span class="packetType">Response 200</span> 
+        
+            (application/json)
+        
+    
+            
+            
+            
+            
+
+
+
+ 
+            <div id="action_get-last-data-by-hashtag_Response_1_body" class=" action-div-body">
+                <p></p>
+
+                
+        	         <div class= "header"><p>Headers</p></div>
+                    
+                    
+                        
+                    
+
+        	        <pre><code>Content-Type: application/json</code></pre>
+                
+
+                
+                    <div class= "header"><p>Body</p></div>
+                    <pre><code>{
+    "ht": "#twitter",
+    "createdAt":"2015-09-02T22:15:13+02",
+    "numTWMales": 100,
+    "numRtwMales": 0,
+    "numReplyMales": 41,
+    "numTWFemales": 10,
+    "numRtwFemales": 40,
+    "numReplyFemales": 4,
+    "numTWPages": 20,
+    "numRtwPages": 10,
+    "numReplyPages": 24,
+    "numTWUnknown": 20,
+    "numRtwUnknown": 10,
+    "numReplyUnknown": 24
+ }
+</code></pre>
+                
+
+                
+            </div>
+            
+            
+     
+</div>
+                                                
+                                            
+                                            <div class="goActions">
+                                                <a href="#action_get-last-data-by-hashtag">Go to specification</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            
+                    </section>
+            
+                    <section id="resource_history-data-by-hashtag_example" class="resourceExample">
+                         <div class= "header" >
+                         
+                            <h4 id="h-resource_history-data-by-hashtag_example">History data by hashtag</h4>
+                            <span class="extra-header">[/gender/hts/{ht}/history]</span>
+                         
+                         </div>
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+
+                           
+
+                            
+                                <div id="action_get-history-data-by-hashtag_examples" class="actionExample GET">
+
+                                    
+    <div class="header">
+        
+            <h5 id="h-action_get-history-data-by-hashtag_examples">Get history data by hashtag </h5>
+            <span class="extra-header">
+		GET 
+                
+                    /gender/hts/{ht}/history
+                
+            </span>
+        
+
+    </div>
+
+                
+                                    <div id="action_get-history-data-by-hashtag_body" class=""> 
+                                        
+                                        
+                                        
+                                                 
+                                        
+                                            
+                                            
+                                                
+            
+                                                
+                                                    
+                                                
+                                                
+                                                
+
+<div class="rest-packet-div">
+
+            <span class="packetType">Response 200</span> 
+        
+            (application/json)
+        
+    
+            
+            
+            
+            
+
+
+
+ 
+            <div id="action_get-history-data-by-hashtag_Response_1_body" class=" action-div-body">
+                <p></p>
+
+                
+        	         <div class= "header"><p>Headers</p></div>
+                    
+                    
+                        
+                    
+
+        	        <pre><code>Content-Type: application/json</code></pre>
+                
+
+                
+                    <div class= "header"><p>Body</p></div>
+                    <pre><code>[
+    {
+        "ht": "#twitter",
+        "createdAt":"2015-09-02T22:15:13+02",
+        "numTWMales": 100,
+        "numRtwMales": 0,
+        "numReplyMales": 41,
+        "numTWFemales": 10,
+        "numRtwFemales": 40,
+        "numReplyFemales": 4,
+        "numTWPages": 20,
+        "numRtwPages": 10,
+        "numReplyPages": 24,
+        "numTWUnknown": 20,
+        "numRtwUnknown": 10,
+        "numReplyUnknown": 24
+    },
+    {
+        "ht": "#twitter",
+        "createdAt":"2015-09-02T22:14:13+02",
+        "numTWMales": 10,
+        "numRtwMales": 20,
+        "numReplyMales": 11,
+        "numTWFemales": 1,
+        "numRtwFemales": 0,
+        "numReplyFemales": 24,
+        "numTWPages": 10,
+        "numRtwPages": 180,
+        "numReplyPages": 4,
+        "numTWUnknown": 2,
+        "numRtwUnknown": 1,
+        "numReplyUnknown": 2
+    }
+]
+</code></pre>
+                
+
+                
+            </div>
+            
+            
+     
+</div>
+                                                
+                                            
+                                            <div class="goActions">
+                                                <a href="#action_get-history-data-by-hashtag">Go to specification</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            
+                    </section>
+            
+        </section>
+    
+        
+            <section id="resource_group_last-tweets_example" class="resourceGroupExample">
+                <div class= "header" ><h3 id="h-resource_group_last-tweets_example">last tweets</h3> </div>
+        
+
+                
+                    <section id="resource_get-last-tweets_example" class="resourceExample">
+                         <div class= "header" >
+                         
+                            <h4 id="h-resource_get-last-tweets_example">Get last tweets</h4>
+                            <span class="extra-header">[/tweets/{ht}{?numResults}]</span>
+                         
+                         </div>
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+
+                           
+
+                            
+                                <div id="action_get-last-tweets-by-hashtag_examples" class="actionExample GET">
+
+                                    
+    <div class="header">
+        
+            <h5 id="h-action_get-last-tweets-by-hashtag_examples">Get last tweets by hashtag </h5>
+            <span class="extra-header">
+		GET 
+                
+                    /tweets/{ht}{?numResults}
+                
+            </span>
+        
+
+    </div>
+
+                
+                                    <div id="action_get-last-tweets-by-hashtag_body" class=""> 
+                                        
+                                        
+                                        
+                                                 
+                                        
+                                            
+                                            
+                                                
+            
+                                                
+                                                    
+                                                
+                                                
+                                                
+
+<div class="rest-packet-div">
+
+            <span class="packetType">Response 200</span> 
+        
+            (application/json)
+        
+    
+            
+            
+            
+            
+
+
+
+ 
+            <div id="action_get-last-tweets-by-hashtag_Response_1_body" class=" action-div-body">
+                <p></p>
+
+                
+        	         <div class= "header"><p>Headers</p></div>
+                    
+                    
+                        
+                    
+
+        	        <pre><code>Content-Type: application/json</code></pre>
+                
+
+                
+                    <div class= "header"><p>Body</p></div>
+                    <pre><code>[
+    {
+        "ht": "#twitter",
+        "createdAt":"2015-09-02T22:14:13+02",
+        "twData":{
+            "postId":1004324234,
+            "userId":474826,
+            "screenName": "testUser",
+            "profileImageUrl":"http://example.com/p.jpg",
+            "text": "sample tweet text",
+            "screenName": "testUser",
+        }
+    }
+]
+</code></pre>
+                
+
+                
+            </div>
+            
+            
+     
+</div>
+                                                
+                                            
+                                            <div class="goActions">
+                                                <a href="#action_get-last-tweets-by-hashtag">Go to specification</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            
+                    </section>
+            
+        </section>
+    
+
+
+
+</section>
+  </section>
+  
+   
+
+
+
+    
+    
+    
+  </div>
+</div>
+</body>
+
+</html>
